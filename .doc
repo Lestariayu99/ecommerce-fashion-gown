@@ -1,0 +1,10 @@
+<!-- // DOKUMENTASI
+
+// SERVER
+// 1. Install npx create-strapi-app@latest server
+// STRAPI => menggunakan strapi sebagai server atau pengganti backend
+
+// CLIENT
+// 2. Install npx create-react-app client
+// 3. Install npm i @mui/material @emotion/react @emotion/styled @mui/icons-material react-router-dom@6 react-redux @reduxjs/toolkit formik yup dotenv react-responsive-carousel
+// 4. untuk menjalankanya npm run start -->
