@@ -3,11 +3,12 @@ import { Box, Typography } from "@mui/material";
 import { shades } from "../../theme";
 
 function Footer() {
+  // eslint-disable-next-line no-unused-vars
   const {
     palette: { neutral },
   } = useTheme();
   return (
-    <Box marginTop="70px" padding="40px 0" backgroundColor={neutral.light}>
+    <Box marginTop="70px" padding="40px 0" bgcolor={shades.neutral[200]}>
       <Box
         width="80%"
         margin="auto"
@@ -58,9 +59,7 @@ function Footer() {
           <Typography variant="h4" fontWeight="bold" mb="30px">
             Contact Us
           </Typography>
-          <Typography mb="30px">
-            South Jakarta
-          </Typography>
+          <Typography mb="30px">South Jakarta</Typography>
           <Typography mb="30px" sx={{ wordWrap: "break-word" }}>
             Email: isabellagown@gmail.com
           </Typography>

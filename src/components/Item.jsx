@@ -17,9 +17,17 @@ const Item = ({ item, width }) => {
   const {
     palette: { neutral },
   } = useTheme();
-
+  // eslint-disable-next-line
   const { category, price, name, image } = item.attributes || {};
   const url = image?.data?.attributes?.formats?.medium?.url;
+
+  // FUNGSI FORMAT RUPIAH
+  function formatRupiah(number) {
+    if (number === undefined) {
+      return "0"; // Atau nilai default lain sesuai kebutuhan Anda
+    }
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 
   return (
     <Box width={width}>
@@ -54,7 +62,6 @@ const Item = ({ item, width }) => {
               alignItems="center"
               backgroundColor={shades.neutral[100]}
               borderRadius="3px"
-              
             >
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
                 <RemoveIcon />
@@ -72,7 +79,6 @@ const Item = ({ item, width }) => {
               }}
               sx={{ backgroundColor: shades.primary[300], color: "white" }}
             >
-              
               {/* icon keranjang */}
               <BsCart4 size={25} />
             </Button>
@@ -87,7 +93,9 @@ const Item = ({ item, width }) => {
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>
-        <Typography fontWeight="bold">Rp {price}K</Typography>
+        <Typography fontWeight="bold">
+          Rp {formatRupiah(item?.attributes?.price)}K
+        </Typography>
       </Box>
     </Box>
   );

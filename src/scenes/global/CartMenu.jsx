@@ -132,13 +132,16 @@ const CartMenu = () => {
                 minWidth: "100%",
                 padding: "20px 40px",
                 m: "20px 0",
+                "&:hover": {
+                  backgroundColor: shades.primary[300],
+                },
               }}
               onClick={() => {
                 navigate("/checkout");
                 dispatch(setIsCartOpen({}));
               }}
             >
-              CHECKOUT
+              Checkout
             </Button>
           </Box>
         </Box>

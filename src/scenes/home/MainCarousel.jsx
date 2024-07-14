@@ -90,6 +90,7 @@ const MainCarousel = () => {
             >
               Discover More
             </Typography>
+           
           </Box>
         </Box>
       ))}

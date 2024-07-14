@@ -17,6 +17,8 @@ const ShoppingList = () => {
     setValue(newValue);
   };
 
+  
+
   //   MENGAMBIL DATA DARI DATABASE STRAPI
   async function getItems() {
     const items = await fetch(
@@ -32,8 +34,7 @@ const ShoppingList = () => {
   // FUNGSI MEGAMBIL DATA ARRAY API STRAPI
   useEffect(() => {
     getItems();
-  }, []);
-  // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // MENGAMBIL DATA DARI DATABASE STRAPI DAN MEMFILTER KATEGORI
   const topRatedItems = items.filter(
@@ -81,9 +82,9 @@ const ShoppingList = () => {
       {/* MEMBUAT JUDUL PRODUCT END */}
 
       <Box
-        margin="0 auto"
+      // TAMPILAN GRID IMAGE
+        margin="10px auto"
         display="grid"
-
         gridTemplateColumns="repeat(auto-fill, 300px)"
         justifyContent="space-around"
         rowGap="20px"

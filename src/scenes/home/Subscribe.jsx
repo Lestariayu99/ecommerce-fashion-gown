@@ -11,7 +11,7 @@ const Subscribe = () => {
       </IconButton>
       <Typography variant="h3">Subscribe To Our NewsLetter</Typography>
       <Typography variant="h3">
-        Discont 20% untuk 10 pelanggan pertama
+        Discount 20% untuk 10 pelanggan pertama
       </Typography>
       <Box
         p="2px 4px"
